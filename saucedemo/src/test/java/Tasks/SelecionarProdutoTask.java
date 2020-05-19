@@ -16,10 +16,12 @@ public class SelecionarProdutoTask {
 		produtoPage = new SelecionarProdutoPage(driver);
 	}
 	
-	public void SelecionarProduto() {
+	public void SelecionarProduto() throws InterruptedException {
 		produtoPage.productLabel().click();
-		produtoPage.productCarLabel().click();
+		Thread.sleep(3000);
+		//produtoPage.productCarLabel().click();
 		validationProduto();
+		Thread.sleep(1000);
 		produtoPage.addCarButton().click();
 	}
 	

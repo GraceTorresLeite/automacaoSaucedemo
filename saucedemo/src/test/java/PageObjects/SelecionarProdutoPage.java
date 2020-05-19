@@ -22,7 +22,9 @@ public class SelecionarProdutoPage {
 	}
 	
 	public WebElement addCarButton() {
-		return this.driver.findElement(By.className("btn_primary btn_inventory"));
+		//return this.driver.findElement(By.className("btn_primary btn_inventory"));
+		return this.driver.findElement(By.xpath("//div[@class='inventory_details_desc_container']"
+				+ "/button[@class='btn_primary btn_inventory']"));
 	}
 
 }
