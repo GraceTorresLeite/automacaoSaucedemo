@@ -4,6 +4,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 
+import static Fw.Report.endReport;
+import static Fw.Report.setExtent;
+
 
 public class BaseTestFw {
 
@@ -17,13 +20,13 @@ public class BaseTestFw {
 	}
 	@Before
 	public void setup() {
-		//report.setExtent();
+		setExtent();
 		getDriver().get(URL);
 	}
 	
 	@After
 	public void teardown() {
-		//report.endReport();
+		endReport();
 		DriverManagerFw.quitDriver();
 	}
 }

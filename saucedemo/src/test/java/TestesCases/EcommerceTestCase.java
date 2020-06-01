@@ -9,6 +9,7 @@ import Fw.BaseTestFw;
 import Fw.ScreenshotFw;
 import Tasks.CheckoutCarrinhoTask;
 import Tasks.LoginTask;
+import Tasks.LogoutTask;
 import Tasks.SelecionarProdutoTask;
 import static Fw.Report.test;
 import static Fw.Report.extent;
@@ -22,7 +23,8 @@ public class EcommerceTestCase extends BaseTestFw {
 
 		LoginTask login = new LoginTask(driver);
 		SelecionarProdutoTask produto = new SelecionarProdutoTask(driver);
-		CheckoutCarrinhoTask checkoout = new CheckoutCarrinhoTask(driver);
+		CheckoutCarrinhoTask checkout = new CheckoutCarrinhoTask(driver);
+		LogoutTask logout = new LogoutTask(driver);
 
 		try {
 
@@ -31,6 +33,9 @@ public class EcommerceTestCase extends BaseTestFw {
 			login.realizarLogin();
 			login.validationHome();
 			produto.SelecionarProduto();
+			checkout.addCarrinho();
+			logout.realizaLogout();
+			
 
 		} catch (Exception e) {
 

@@ -27,11 +27,7 @@ public class LoginTask {
 		login.userTextField().sendKeys("standard_user");
 		login.passwordTextField().sendKeys("secret_sauce");
 		login.loginButton().click();
-		try {
-			Thread.sleep(3000);  // pediu um try catch
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		Thread.sleep(3000);  // pediu um try catch antes
 		validationHome();
 
 	}

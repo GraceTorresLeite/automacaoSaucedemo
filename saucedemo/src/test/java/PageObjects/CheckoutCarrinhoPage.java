@@ -63,18 +63,6 @@ public class CheckoutCarrinhoPage {
 		return this.driver.findElement(By.xpath("//div[@class='complete-text']"));
 	}
 	
-	 public WebElement logoutButton(){
-		 return this.driver.findElement(By.xpath("//nav[@class='bm-item-list']"
-		 		+ "/a[@id='logout_sidebar_link']"));
-	 }
-	 
-	 public WebElement menuLogouButton() {
-		 return this.driver.findElement(By.className("bm-burger-button"));
-
-	 }
-	 
-	 public WebElement logoHomeImage() {
-		 return this.driver.findElement(By.className("login_logo"));
-	 }
+	
 	
 }
